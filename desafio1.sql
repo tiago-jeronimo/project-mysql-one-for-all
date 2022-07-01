@@ -18,9 +18,9 @@ CREATE TABLE IF NOT EXISTS `SpotifyClone`.`planos`(
 INSERT INTO `SpotifyClone`.`planos` (`id_plano`,`nome`, `valor`)
 VALUES  
         (1, 'gratuito', 0.00),
-        (2, 'familiar', 7.99),
-        (3, 'pessoal', 6.99),
-        (4, 'universitário', 5.99)
+        (2, 'universitário', 5.99),
+		(3, 'pessoal', 6.99),
+        (4, 'familiar', 7.99)
 ;
 
 -- ------------------------------/////------------------------------ --
@@ -43,15 +43,15 @@ CREATE TABLE IF NOT EXISTS `SpotifyClone`.`usuario` (
 INSERT INTO `SpotifyClone`.`usuario`
 VALUES
         (1, 23, 1, 'Thati', '2019-10-20'),
-        (2, 35, 2, 'Cintia', '2017-12-30'),
-        (3, 20, 4, 'Bill', '2019-06-05'),
+        (2, 35, 4, 'Cintia', '2017-12-30'),
+        (3, 20, 2, 'Bill', '2019-06-05'),
         (4, 45, 3, 'Roger', '2020-05-13'),
         (5, 58, 3, 'Norman', '2017-02-17'),
-        (6, 33, 2, 'Patrick', '2017-01-06'),
-        (7, 26, 4, 'Vivian', '2018-01-05'),
-        (8, 19, 4, 'Carol', '2018-02-14'),
-        (9, 42, 2, 'Angelina', '2018-04-29'),
-        (10, 46, 2, 'Paul', '2017-01-17');
+        (6, 33, 4, 'Patrick', '2017-01-06'),
+        (7, 26, 2, 'Vivian', '2018-01-05'),
+        (8, 19, 2, 'Carol', '2018-02-14'),
+        (9, 42, 4, 'Angelina', '2018-04-29'),
+        (10, 46, 4, 'Paul', '2017-01-17');
 
 -- ------------------------------/////------------------------------ -- 
 -- >>> CRIA TABELA DE ARTISTA <<< --
