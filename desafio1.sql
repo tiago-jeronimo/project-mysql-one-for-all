@@ -5,7 +5,7 @@ CREATE SCHEMA IF NOT EXISTS `SpotifyClone`;
 USE `SpotifyClone` ;
 
 -- ------------------------------/////------------------------------ --
--- >>> CRIA TABELA DE PLANOS <<< --
+-- >>> CRIA TABELA DE PLANOS <<<
 CREATE TABLE IF NOT EXISTS `SpotifyClone`.`planos`(
     `id_plano` INT NOT NULL,
     `nome` VARCHAR(60) NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `SpotifyClone`.`planos`(
     PRIMARY KEY (`id_plano`)
     ) ENGINE = InnoDB;
 
--- >>> POPULA TABELA DE PLANOS <<< --
+-- >>> POPULA TABELA DE PLANOS <<<
 INSERT INTO `SpotifyClone`.`planos` (`id_plano`,`nome`, `valor`)
 VALUES  
         (1, 'gratuito', 0.00),
@@ -25,7 +25,7 @@ VALUES
 
 -- ------------------------------/////------------------------------ --
 
--- >>> CRIA TABELA DE USUARIO <<< --
+-- >>> CRIA TABELA DE USUARIO <<<
 CREATE TABLE IF NOT EXISTS `SpotifyClone`.`usuario` (
     `id_usuario` INT NOT NULL AUTO_INCREMENT,
     `idade` INT NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `SpotifyClone`.`usuario` (
 
 
 
--- >>> POPULA TABELA DE USUARIO <<< --
+-- >>> POPULA TABELA DE USUARIO <<<
 INSERT INTO `SpotifyClone`.`usuario`
 VALUES
         (1, 23, 1, 'Thati', '2019-10-20'),
@@ -54,7 +54,7 @@ VALUES
         (10, 46, 4, 'Paul', '2017-01-17');
 
 -- ------------------------------/////------------------------------ -- 
--- >>> CRIA TABELA DE ARTISTA <<< --
+-- >>> CRIA TABELA DE ARTISTA <<<
 
 CREATE TABLE IF NOT EXISTS `SpotifyClone`.`artista` (
     `id_artista` INT NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `SpotifyClone`.`artista` (
 ) ENGINE = InnoDB;
 
 
--- >>> POPULA TABELA DE ARTISTA <<< -- 
+-- >>> POPULA TABELA DE ARTISTA <<<
 
 INSERT INTO `SpotifyClone`.`artista`
 VALUES 
@@ -76,7 +76,7 @@ VALUES
         (6, 'Fog'); 
 
 -- ------------------------------/////------------------------------ --
--- >>> CRIA TABELA DE ALBUNS <<< --
+-- >>> CRIA TABELA DE ALBUNS <<<
 
 CREATE TABLE IF NOT EXISTS `SpotifyClone`.`album` (
     `id_album` INT NOT NULL AUTO_INCREMENT,
@@ -89,13 +89,13 @@ CREATE TABLE IF NOT EXISTS `SpotifyClone`.`album` (
 ) ENGINE = InnoDB;
 
 
--- >>> POPULA TABELA DE ALBUNS <<< --
+-- >>> POPULA TABELA DE ALBUNS <<<
 INSERT INTO `SpotifyClone`.`album`
 VALUES 
         (1, 'Envious', 1990, 1),
         (2, 'Exuberant', 1993, 1),
         (3, 'Hallowed Steam', 1995, 2),
-        (4, 'Incandescent', 1998, 2),
+        (4, 'Incandescent', 1998, 3),
         (5, 'Temporary Culture', 2001, 4),
         (6, 'Library of liberty', 2003, 4),
         (7, 'Chained Down', 2007, 5),
@@ -105,7 +105,7 @@ VALUES
 
 
 -- ------------------------------/////------------------------------ --
--- >>> CRIA TABELA DE MUSICAS <<< --
+-- >>> CRIA TABELA DE MUSICAS <<<
 
 CREATE TABLE IF NOT EXISTS `SpotifyClone`.`musica` (
     `id_musica` INT NOT NULL AUTO_INCREMENT ,
@@ -120,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `SpotifyClone`.`musica` (
 ) ENGINE = InnoDB;
 
 
--- >>> POPULA TABELA DE MUSICAS <<< --
+-- >>> POPULA TABELA DE MUSICAS <<<
 
 INSERT INTO `SpotifyClone`.`musica` 
 VALUES 
@@ -168,7 +168,7 @@ VALUES
 
 
 -- ------------------------------/////------------------------------ --
--- >>> CRIA TABELA DE HISTORICO <<< --
+-- >>> CRIA TABELA DE HISTORICO <<<
 
 CREATE TABLE IF NOT EXISTS `SpotifyClone`.`historico` (
     `id_usuario` INT NOT NULL,
@@ -181,7 +181,7 @@ CREATE TABLE IF NOT EXISTS `SpotifyClone`.`historico` (
 )ENGINE = InnoDB;
 
 
--- >>> POPULA TABELA DE HISTORICO <<< --
+-- >>> POPULA TABELA DE HISTORICO <<<
 
 INSERT INTO `SpotifyClone`.`historico`
 VALUES
@@ -225,7 +225,7 @@ VALUES
         (10, 13, "2017-12-25 01:03:57");
 
 -- ------------------------------/////------------------------------ --
--- >>> CRIA TABELA DE SEGUINDO <<< --
+-- >>> CRIA TABELA DE SEGUINDO <<< 
 
 CREATE TABLE IF NOT EXISTS `SpotifyClone`.`seguindo`(
     `id_usuario` INT NOT NULL,
@@ -237,7 +237,7 @@ CREATE TABLE IF NOT EXISTS `SpotifyClone`.`seguindo`(
 )ENGINE = InnoDB;
 
 
--- >>> POPULA TABELA DE SEGUINDO <<< --
+-- >>> POPULA TABELA DE SEGUINDO <<<
 
 INSERT INTO `SpotifyClone`.`seguindo`
 VALUES 
@@ -263,5 +263,3 @@ VALUES
         (9, 3),
         (10, 3),
         (10, 6);
-
--- ------------------------------/////------------------------------ --
